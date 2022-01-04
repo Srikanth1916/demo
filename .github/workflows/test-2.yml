@@ -1,8 +1,6 @@
 name: Bump version
 on:
-  push:
-    branches:
-      - main
+  workflow_dispatch
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,8 +11,7 @@ jobs:
         uses: mathieudutour/github-tag-action@v6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          release_branches: master
-
+          release_branches: main
 
 
       - name: Create a GitHub release
