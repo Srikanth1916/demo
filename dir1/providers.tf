@@ -1,7 +1,7 @@
 provider "aws" {
 }
 
-#Creating the ec2 instance using terraform:
+#Creating the ec2 instance usingrr terraform:
 
 resource "aws_instance"  "ec2" {
   ami           = "ami-00dfe2c7ce89a450b"
