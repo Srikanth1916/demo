@@ -1,11 +1,11 @@
-name: 'Terraform'
+name: 'testing'
 
 on:
   workflow_dispatch
 
 jobs:
-  terraform:
-    name: 'Terraform'
+  testing:
+    name: 'testing'
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -19,3 +19,4 @@ jobs:
     - name: checking the release tag number
       run: |
        echo $GITHUB_REF
+       echo ${{ github.ref }}
