@@ -1,10 +1,8 @@
 name: 'testing'
 
 on:
-  #workflow_dispatch
-  create:
-    tags:
-      - "v[0-9].[0-9]+.[0-9]+"
+  workflow_dispatch
+
 jobs:
   testing:
     name: 'testing'
@@ -29,5 +27,5 @@ jobs:
         docker build -t thati/srikanth .
         #"docker tag thati/srikanth:latest" "thati/srikanth:${{ github.event.release.tag_name }}"
         #docker push thati/srikanth:${{ github.event.release.tag_name }}
-        docker tag thati/srikanth:latest thati/srikanth:${{ github.event.release.tag_name }}
-        #docker push thati/srikanth:${{ github.event.release.tag_name }}
+        docker tag thati/srikanth:latest
+        docker push thati/srikanth:latest
