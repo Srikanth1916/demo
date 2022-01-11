@@ -25,5 +25,7 @@ jobs:
     - name: build, Tag, push
       run: |
         docker build -t thati/srikanth .
-        "docker tag thati/srikanth:latest" "thati/srikanth:${{ github.event.release.tag_name }}"
-         docker push thati/srikanth:${{ github.event.release.tag_name }}
+        #"docker tag thati/srikanth:latest" "thati/srikanth:${{ github.event.release.tag_name }}"
+        #docker push thati/srikanth:${{ github.event.release.tag_name }}
+        docker tag thati/srikanth:latest thati/srikanth:${{ github.event.release.tag_name }}
+        #docker push thati/srikanth:${{ github.event.release.tag_name }}
