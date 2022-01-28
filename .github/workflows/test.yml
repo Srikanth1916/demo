@@ -15,7 +15,7 @@ jobs:
     - name: Repo Checkout
       uses: actions/checkout@v2
 
-    - name: Configure AWS credentials
+    - name: s3 info
       run: aws s3 ls
          
     - name: Login to Docker Hub
@@ -30,7 +30,7 @@ jobs:
         distribution: 'adopt'		
         cache: maven
     - name: Build the maven
-      run:  mvn clean install
+      run:  mvn clean 
     - name: build, Tag, push
       run: |
         docker build -t thati/srikanth .
