@@ -6,7 +6,7 @@ on:
 jobs:
   testing:
     name: 'testing'
-    runs-on: ubuntu-latest
+    runs-on: github-runner1
     defaults:
       run:
         shell: bash
