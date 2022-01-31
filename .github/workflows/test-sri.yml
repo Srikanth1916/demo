@@ -9,7 +9,7 @@ jobs:
     name: 'testing'
     runs-on: github-runner1
     env:
-    AWS_REGION: us-east-2
+       AWS_REGION: us-east-2
     defaults:
       run:
         shell: bash
