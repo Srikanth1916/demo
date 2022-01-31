@@ -1,0 +1,25 @@
+
+name: 'testing'
+
+on:
+  workflow_dispatch
+
+jobs:
+  testing:
+    name: 'testing'
+    runs-on: github-runner1
+    env:
+    AWS_REGION: us-east-2
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+    - name: Repo Checkout
+      uses: actions/checkout@v2
+      
+      
+    - name: calling
+      run: | 
+          chmod 777 shell.sh
+          ./shell.sh
