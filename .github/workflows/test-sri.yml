@@ -1,5 +1,5 @@
 
-name: 'testing'
+name: 'testing-sri'
 
 on:
   workflow_dispatch
